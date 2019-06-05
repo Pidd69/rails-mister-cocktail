@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Add new Cocktail</h1>
+  <p>Add your favourit cocktail to this site</p>
+
+  <%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Create new cocktail!", class: "btn btn-primary" %>
+  <% if @cocktail.errors.any? %>
+  <div class="errors-container">
+    <ul>
+      <% @cocktail.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <% end %>
+  <%= link_to 'Cancel', cocktails_path, class: "btn btn-secondary"%>
+</div>
