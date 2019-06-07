@@ -9,13 +9,14 @@ $location-color: black;
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 body {
-  font-family: 'Roboto', sans-serif;
+
 }
 .card {
+  font-family: 'Roboto', sans-serif;
   background-color:$card-bg;
   border-radius:10px;
   overflow:hidden;
-  margin-bottom:20px;
+  margin-bottom:30px;
   figure {
     position:relative;
     width:100%;

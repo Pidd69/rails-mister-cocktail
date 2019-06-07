@@ -1,24 +1,25 @@
 <div class="container">
   <h1><%= @cocktail.name %></h1>
   <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-  <h2>Cocktail ingredients</h2>
+  <h2>Ingredients</h2>
   <% @cocktail.doses.each do |dose| %>
   <div class="flex p-2">
     <%= dose.description %> <%= dose.ingredient.name %>
     <%= link_to dose_path(dose), method: :delete do %>
-    <i class="fas fa-trash-alt text-danger px-4"></i>
+    <i class="fas fa-trash-alt text-secondary px-4"></i>
     <% end %>
   </div>
   <% end %>
-  <%= link_to 'Back to all cocktails', cocktails_path, class: "btn btn-secondary"%>
-  <br><br>
-
+  <br>
   <h4>Add an ingredient</h4>
   <div class="container" width= '300' >
     <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description %>
     <%= f.association :ingredient %>
-    <%= f.submit "Add ingredient", class: "btn btn-primary" %>
+    <div class="flex">
+      <%= f.submit "Add ingredient", class: "btn btn-secondary" %>
+      <%= link_to 'Save cocktail', cocktails_path, class: "btn btn-secondary"%>
+    </div>
     <% if @dose.errors.any? %>
     <div class="errors-container">
       <ul>

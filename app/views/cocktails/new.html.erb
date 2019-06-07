@@ -1,12 +1,13 @@
 <div class="container">
-  <h1>Add new Cocktail</h1>
-  <p>Add your favourit cocktail to this site</p>
+  <h1>Add favorite drink</h1>
+  <p>Give it a name and add a nice photo</p>
 
   <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name %>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit "Create new cocktail!", class: "btn btn-primary" %>
+  <div class="flex">
+  <%= f.submit "Create cocktail!", class: "btn btn-secondary" %>
   <% if @cocktail.errors.any? %>
   <div class="errors-container">
     <ul>
@@ -18,4 +19,6 @@
   <% end %>
   <% end %>
   <%= link_to 'Cancel', cocktails_path, class: "btn btn-secondary"%>
+  </div>
+  <p>On next page you will specify the ingredients</p>
 </div>
