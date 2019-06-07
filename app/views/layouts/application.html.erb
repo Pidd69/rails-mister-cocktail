@@ -12,6 +12,13 @@
   </head>
 
   <body>
+    <div class="mynavbar navbar navbar-dark bg-dark text-white">
+    <%= link_to root_path do %>
+      <h4>Rocktails - for people wanting to get drunk with style</h4>
+    <% end %>
+    <%= link_to 'Add cocktail', new_cocktail_path, class:"btn btn-secondary" %>
+    </div>
+    <br>
     <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->

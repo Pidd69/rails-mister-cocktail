@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-color: #313131 !important;
 }
 .sign {
   -ms-transform: rotate(-3deg);
@@ -38,6 +39,7 @@
 }
 .neon-blue {
   margin: 0 auto;
+  font-size: 50px;
   text-align: center;
   color: #ebffff;
   text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 15px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
